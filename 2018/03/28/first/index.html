@@ -22,13 +22,13 @@
 
   <meta name="description" content="缘由中饭前一个小时的时间不想看论文了，于是决定干点什么事放松一下，突发奇想，搞个博客吧。鉴于之前有过一次手动搭前端后端的漫长经历，想想还是决定借用Github Page以及成熟的hexo来实现。因为流程简单，再加上多少用过Github，总体难度是不大的，不过也还是遇到了一些小坑，记录一下，顺便当作第一篇博文了。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="突然想搭建博客">
+<meta property="og:title" content="用hexo+Next搭建博客">
 <meta property="og:url" content="http://blog.wuqingzhe.cn/2018/03/28/first/index.html">
 <meta property="og:site_name" content="FlySevenWu Blog">
 <meta property="og:description" content="缘由中饭前一个小时的时间不想看论文了，于是决定干点什么事放松一下，突发奇想，搞个博客吧。鉴于之前有过一次手动搭前端后端的漫长经历，想想还是决定借用Github Page以及成熟的hexo来实现。因为流程简单，再加上多少用过Github，总体难度是不大的，不过也还是遇到了一些小坑，记录一下，顺便当作第一篇博文了。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2018-03-28T10:40:07.000Z">
-<meta property="article:modified_time" content="2020-04-01T07:27:38.000Z">
+<meta property="article:modified_time" content="2022-08-01T14:43:48.555Z">
 <meta property="article:author" content="Gareth Ng">
 <meta property="article:tag" content="hexo">
 <meta property="article:tag" content="Next">
@@ -47,7 +47,7 @@
   };
 </script>
 
-  <title>突然想搭建博客 | FlySevenWu Blog</title>
+  <title>用hexo+Next搭建博客 | FlySevenWu Blog</title>
   
 
 
@@ -176,7 +176,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          突然想搭建博客
+          用hexo+Next搭建博客
         </h1>
 
         <div class="post-meta">
@@ -193,7 +193,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-01 15:27:38" itemprop="dateModified" datetime="2020-04-01T15:27:38+08:00">2020-04-01</time>
+                <time title="修改时间：2022-08-01 22:43:48" itemprop="dateModified" datetime="2022-08-01T22:43:48+08:00">2022-08-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -206,7 +206,7 @@
             </span>
 
           
-            <span id="/2018/03/28/first/" class="post-meta-item leancloud_visitors" data-flag-title="突然想搭建博客" title="阅读次数">
+            <span id="/2018/03/28/first/" class="post-meta-item leancloud_visitors" data-flag-title="用hexo+Next搭建博客" title="阅读次数">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
               </span>
@@ -232,7 +232,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>1.6k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -254,6 +254,10 @@
         <h1 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h1><p>中饭前一个小时的时间不想看论文了，于是决定干点什么事放松一下，突发奇想，搞个博客吧。鉴于之前有过一次手动搭前端后端的漫长经历，想想还是决定借用Github Page以及成熟的hexo来实现。因为流程简单，再加上多少用过Github，总体难度是不大的，不过也还是遇到了一些小坑，记录一下，顺便当作第一篇博文了。</p>
 <span id="more"></span>
 <h1 id="记录几个小坑"><a href="#记录几个小坑" class="headerlink" title="记录几个小坑"></a>记录几个小坑</h1><h2 id="坑一-deploy"><a href="#坑一-deploy" class="headerlink" title="坑一 deploy"></a>坑一 deploy</h2><p>遇到的第一个问题是部署的时候，执行命令hexo d之后一点反应都没有，我反复检查确定输入无误之后就开始借助搜索引擎了，一查问题就解决了，配置文件_config.yml内所有冒号后都需要有一个空格。遂怒输空格，问题解决。</p>
+<p>2022.08.01更新：<br>虽然好久没有写博客了，突然更新遇到几个坑。hexo deploy之后发现所有生成的html都是空文件，但hexo server得到的本地文件却没有问题。解决方案，升级所有包。<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm-check</span><br><span class="line">npm install -g npm-upgrade</span><br><span class="line"></span><br><span class="line">npm-check</span><br><span class="line">npm-upgrade</span><br><span class="line"></span><br><span class="line">npm update</span><br></pre></td></tr></table></figure></p>
+<p>另外升级过后的hexo，需要在_config.xml中的deploy处多设置两个配置，否则hexp生成的css不能成功渲染</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">url: https://example.com</span><br><span class="line">root: username.github.io.git</span><br></pre></td></tr></table></figure>
+<p>此处参考<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/1ef7cb1802d8">这篇博客</a></p>
 <h2 id="坑二-tags"><a href="#坑二-tags" class="headerlink" title="坑二 tags"></a>坑二 tags</h2><p>完成之后发现我的博客不想大佬们那样有tags和categories页面，暗暗地不开心，就想着我也加一个呗。照着网上的教程一顿操作，页面倒是用了，除了一个大大的tag什么都没有。</p>
 <p>百度出来的都是如出一辙的答案，也同样没什么用。最后在知乎上发现了解决方案</p>
 <p>scaffolds/draft.md </p>
@@ -445,12 +449,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">32k</span>
+    <span title="站点总字数">33k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">29 分钟</span>
+    <span title="站点阅读时长">30 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>

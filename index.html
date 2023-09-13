@@ -158,6 +158,125 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://blog.wuqingzhe.cn/2023/09/13/wwdc2023-10119/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Gareth Ng">
+      <meta itemprop="description" content="为了更伟大的利益">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Gareth Ng">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2023/09/13/wwdc2023-10119/" class="post-title-link" itemprop="url">Session 10119 - 在 Safari 上开发浏览器插件</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2023-09-13 23:53:57" itemprop="dateCreated datePublished" datetime="2023-09-13T23:53:57+08:00">2023-09-13</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-09-14 00:15:14" itemprop="dateModified" datetime="2023-09-14T00:15:14+08:00">2023-09-14</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mac%E5%BC%80%E5%8F%91/" itemprop="url" rel="index"><span itemprop="name">Mac开发</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2023/09/13/wwdc2023-10119/" class="post-meta-item leancloud_visitors" data-flag-title="Session 10119 - 在 Safari 上开发浏览器插件" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2023/09/13/wwdc2023-10119/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2023/09/13/wwdc2023-10119/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>18k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>17 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>本文基于<a target="_blank" rel="noopener" href="https://developer.apple.com/videos/play/wwdc2023/10119/">Session 10119</a>梳理。<br>本文首发于小专栏《WWDC23 内参》， 更多文章见<a target="_blank" rel="noopener" href="https://xiaozhuanlan.com/wwdc23">《WWDC23 内参》</a></p>
+<p><img src="/images/SafariWebExtension.png" alt></p>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在 WWDC 2020 和 WWDC 2021，苹果宣布了支持 Chrome 风格的 Safari Web 插件。开发者现在可以在 macOS 和 iOS 的 Safari 上使用 Chrome 插件。在 WWDC 2022 上，Safari Web 插件又有了新的变化，引入了 Manifest V3，并且支持了 declarative net request。这使得 Safari Web 插件越来越接近 Chrome 插件。本文将介绍 WWDC 2023 Safari Web 插件的新特性，以及 Safari Web 插件的发展历程。最后，我们将介绍 Safari Web Extension 和 Chrome Extension 之间的区别。</p>
+<p>本文将实现一个简单的 macOS 上的 Safari Web Extension，这个插件的功能是在网页上添加一个按钮，点击按钮后，可以前往网页的最顶端，暂时命名为 <a target="_blank" rel="noopener" href="https://github.com/garethng/autoScroll">autoScroll</a>。<br></p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/09/13/wwdc2023-10119/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://blog.wuqingzhe.cn/2022/08/07/swift-package-manager-slow-issue/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1194,124 +1313,11 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://blog.wuqingzhe.cn/2018/03/28/first/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Gareth Ng">
-      <meta itemprop="description" content="为了更伟大的利益">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Gareth Ng">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2018/03/28/first/" class="post-title-link" itemprop="url">用hexo+Next搭建博客</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2018-03-28 18:40:07" itemprop="dateCreated datePublished" datetime="2018-03-28T18:40:07+08:00">2018-03-28</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-08-01 22:43:48" itemprop="dateModified" datetime="2022-08-01T22:43:48+08:00">2022-08-01</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%97%B2%E6%9D%A5%E6%97%A0%E4%BA%8B/" itemprop="url" rel="index"><span itemprop="name">闲来无事</span></a>
-                </span>
-            </span>
-
-          
-            <span id="/2018/03/28/first/" class="post-meta-item leancloud_visitors" data-flag-title="用hexo+Next搭建博客" title="阅读次数">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span class="leancloud-visitors-count"></span>
-            </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2018/03/28/first/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2018/03/28/first/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.6k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="缘由"><a href="#缘由" class="headerlink" title="缘由"></a>缘由</h1><p>中饭前一个小时的时间不想看论文了，于是决定干点什么事放松一下，突发奇想，搞个博客吧。鉴于之前有过一次手动搭前端后端的漫长经历，想想还是决定借用Github Page以及成熟的hexo来实现。因为流程简单，再加上多少用过Github，总体难度是不大的，不过也还是遇到了一些小坑，记录一下，顺便当作第一篇博文了。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2018/03/28/first/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -1378,7 +1384,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1442,7 +1448,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2022</span>
+  <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
@@ -1451,12 +1457,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-chart-area"></i>
     </span>
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">52k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">30 分钟</span>
+    <span title="站点阅读时长">47 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
